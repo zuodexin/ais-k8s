@@ -27,3 +27,5 @@
 #  - sdh
 #  - sdi
 #  - sdj
+ais_devices:
+ - sdb

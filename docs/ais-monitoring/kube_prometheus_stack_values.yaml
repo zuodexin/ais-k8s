@@ -1,5 +1,5 @@
 ---
-grafanaAdminPassword: &grafanaAdminPassword your_grafana_password
+grafanaAdminPassword: &grafanaAdminPassword easy
 
 aistoreMonitoringAffinity: &aistoreMonitoringAffinity
   nodeAffinity:
@@ -12,10 +12,10 @@ aistoreMonitoringAffinity: &aistoreMonitoringAffinity
           - "true"
 
 aistoreMonitoringSecurityContext: &aistoreMonitoringSecurityContext
-  runAsGroup: 1002
+  runAsGroup: 1000
   runAsNonRoot: true
-  runAsUser: 1002
-  fsGroup: 1002
+  runAsUser: 1000
+  fsGroup: 1000
 
 prometheusOperator:
   affinity: *aistoreMonitoringAffinity

@@ -25,3 +25,8 @@
 #
 # ais_mpath_size: 9Ti
 #
+
+
+ais_mpaths:
+  - "/ais/sdb"
+ais_mpath_size: 16Gi

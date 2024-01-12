@@ -36,14 +36,14 @@ fi
 target_num=0
 for n in ${nodes} ; do
     for m in ${mpaths}; do
-        name="$n-pv${m//\//\-}"
+        name="$n-pv${m////-}"
         export NAME=$name
         export MPATH=$m
         export NODE=$n
-        export MPATH_LABEL=pv${m//\//\-}
+        export MPATH_LABEL=pv${m////-}
         export MPATH_SIZE=$mpath_size
         export NAMESPACE=$namespace
-        export CLAIM_NAME=ais${m//\//\-}-ais-target-$target_num
+        export CLAIM_NAME=ais${m////-}-ais-target-$target_num
         envsubst < "${source_dir}"/pv.template.yaml > /tmp/pv.yaml
         kubectl apply -f /tmp/pv.yaml
         rm /tmp/pv.yaml
